@@ -65,6 +65,4 @@ run the server
   npm run start
 ```
 
-- mysql installed and running
-- A mysql database created for this project
-- Knowledge of TypeScript and Express framework
+
