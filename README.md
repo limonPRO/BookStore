@@ -65,11 +65,6 @@ run the server
   npm run start
 ```
 
-## API Endpoints
-The following endpoints are available:
-
-Before you begin, ensure you have met the following requirements:
-- Node.js installed on your local machine
 - mysql installed and running
 - A mysql database created for this project
 - Knowledge of TypeScript and Express framework
