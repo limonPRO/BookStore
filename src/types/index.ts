@@ -14,10 +14,16 @@ export interface Author {
   }
 
   
-  export interface ApiResponse<T=null> {
+  export interface ApiResponse<T=null > {
     success: boolean;
     message: string;
     data: T | null;
   }
 
+  export interface loginResponse<T=null > {
+    success: boolean;
+    message: string;
+    data: T | null;
+    token: string
+  }
 

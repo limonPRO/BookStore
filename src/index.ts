@@ -4,6 +4,7 @@ require("dotenv").config();
 import authorRoutes from './routes/author';
 import { errorHandler } from "./utils/errorHandler";
 import bookRoutes from './routes/book';
+import authRoutes from "./routes/auth"
 
 
 export const app = express();
@@ -17,6 +18,7 @@ app.use(errorHandler);
 
 app.use('/authors', authorRoutes);
 app.use('/books', bookRoutes);
+app.use('/users', authRoutes);
 
 app.get("/", (req: Request, res: Response) => {
   res.send("working");

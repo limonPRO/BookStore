@@ -4,6 +4,7 @@ import { getAuthors, getAuthorById, createAuthor, updateAuthor, deleteAuthor } f
 
 
 import { checkSchema } from 'express-validator';
+import { verifyUserToken } from '../middileware/verifyUser';
 
 const authorSchema = {
   name: {
@@ -18,8 +19,8 @@ const authorSchema = {
 const router: Router = Router();
 router.get('/', getAuthors);
 router.get('/:id', getAuthorById);
-router.post('/', checkSchema(authorSchema), createAuthor);
-router.put('/:id',checkSchema(authorSchema), updateAuthor);
-router.delete('/:id', deleteAuthor);
+router.post('/',verifyUserToken, checkSchema(authorSchema), createAuthor);
+router.put('/:id',verifyUserToken, checkSchema(authorSchema), updateAuthor);
+router.delete('/:id', verifyUserToken, deleteAuthor);
 
 export default router;
